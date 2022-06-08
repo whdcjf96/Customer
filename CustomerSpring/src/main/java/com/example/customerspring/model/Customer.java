@@ -21,7 +21,7 @@ import lombok.ToString;
 public class Customer {
 //    Long(객체), long(일반 자료형)
     private Long id;
-    private String fritsName;
+    private String firstName;
     private String lastName;
     private String email;
     private String phone;

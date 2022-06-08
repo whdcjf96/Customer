@@ -42,8 +42,8 @@
                                 PHONE,
                                 INSERT_TIME)
         VALUES (SQ_CUSTOMER.NEXTVAL,
-                #{first_name},
-                #{last_name},
+                #{firstName},
+                #{lastName},
                 #{email},
                 #{phone},
                 TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'))
@@ -67,7 +67,7 @@
     <delete id="deleteCustomer" parameterType="long">
         UPDATE TB_CUSTOMER
         SET
-            DELETE_YN = 'Y'
+            DELETE_YN = 'Y',
             DELETE_TIME=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
         WHERE ID=#{id}
     </delete>
@@ -75,7 +75,7 @@
     <delete id="deleteAll">
         UPDATE TB_CUSTOMER
         SET
-            DELETE_YN = 'Y'
+            DELETE_YN = 'Y',
             DELETE_TIME=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
     </delete>
 
